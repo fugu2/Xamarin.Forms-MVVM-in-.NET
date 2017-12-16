@@ -5,6 +5,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="View\Xamarin.Forms.MVVM.NETPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="View\Xamarin.Forms.MVVM.NETPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ViewModel\Xamarin.Forms.MVVM.NET.ViewModel" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
+      <DependentUpon>App_.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App_.xaml.cs">
+      <DependentUpon>App_.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

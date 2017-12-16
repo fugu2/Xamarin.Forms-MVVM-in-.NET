@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace Xamarin.Forms.MVVM.NET
+namespace Xamarin.Forms.MVVM.NET.Core
 {
     public partial class App : Application
     {
@@ -8,7 +8,7 @@ namespace Xamarin.Forms.MVVM.NET
         {
             InitializeComponent();
 
-            MainPage = new Xamarin_Forms_MVVM_NETPage();
+            MainPage = new DemoPage();
         }
 
         protected override void OnStart()

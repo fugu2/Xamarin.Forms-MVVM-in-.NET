@@ -14,7 +14,7 @@ namespace Xamarin.Forms.MVVM.NET.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            LoadApplication(new App());
+            LoadApplication(new Core.App());
 
             return base.FinishedLaunching(app, options);
         }
